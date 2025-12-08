@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Hello, World!</title>
+</head>
+<body>
+
+<input type="text" oninput="tampil(this.value)">
+<p>hasil: <span id="hasil"></span></p>
+
+<script>
+function tampil(teks) {
+    document.getElementById("hasil").innerHTML = teks;
+}
+    /*
+    1.Apa perbedaan onclick dan onmouseover?
+    2.Mengapa event penting untuk interaktivitas?
+    jawab=
+    1.Event	Kapan Terjadi
+     onclick	saat elemen diklik
+     onmouseover	saat mouse diarahkan ke elemen (tanpa klik)
+   2.Karena event membuat halaman web:
+    Bisa merespon tindakan pengguna
+    Tidak statis
+    Lebih menarik dan dinamis (misalnya tombol, animasi, form)
+    Tanpa event → website hanya tampil, tidak bisa berinteraksi.*/
+  </script>
+</body>
+</html>

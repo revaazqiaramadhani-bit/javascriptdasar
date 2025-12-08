@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Form Pendaftaran</h3>
+
+<input type="text" id="nama" placeholder="Nama lengkap"><br><br>
+<input type="email" id="email" placeholder="Email"><br><br>
+<input type="password" id="password" placeholder="Kata sandi"><br><br>
+
+<button onclick="validasi()">Daftar</button>
+
+<p id="pesan"></p>
+
+<script>
+function validasi() {
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("password").value;
+    let pes = document.getElementById("pesan");
+
+    // reset pesan
+    pes.innerHTML = "";
+
+    if (nama === "" || email === "" || pass === "") {
+        pes.innerHTML = "Semua kolom wajib diisi!";
+        pes.style.color = "red";
+        return;
+    }
+
+    if (pass.length < 8) {
+        pes.innerHTML = "Password harus minimal 8 karakter!";
+        pes.style.color = "red";
+        return;
+    }
+
+    if (!email.includes("@")) {
+        pes.innerHTML = "Email tidak valid!";
+        pes.style.color = "red";
+        return;
+    }
+
+    pes.innerHTML = "Pendaftaran berhasil!";
+    pes.style.color = "green";
+}
+  /*
+  1. Mengapa validasi penting sebelum data dikirim?
+
+Contoh jawaban:
+
+Untuk memastikan data benar.
+
+Menghindari error di server.
+
+Mencegah data kosong.
+
+Menjaga keamanan (password sesuai).
+
+
+2. Apa risiko jika tidak validasi?
+
+Data kosong masuk database.
+
+Email salah → tidak bisa dikontak.
+
+Password terlalu lemah.
+
+Form bisa disalahgunakan.
+  */
+
+</script>
+
+</body>
+</html>

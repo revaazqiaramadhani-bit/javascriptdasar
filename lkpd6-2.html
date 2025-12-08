@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>hallo,world</title>
+</head>
+<body>
+  <div id="wadah"></div>
+<button onclick="tambahParagraf()">Tambah Paragraf</button>
+
+<script>
+  function tambahParagraf() {
+    let baru = document.createElement("p");  
+    baru.innerHTML = "halo saya reva azqia ramadhani"; 
+
+    let tempat = document.getElementById("wadah"); 
+    tempat.appendChild(baru);      
+  }
+  /*
+  1.Apa fungsi document.getElementById()?
+  2.Bagaimana cara menambah elemen baru ke halaman?
+  jawab=
+  1.Menemukan dan memberi akses ke elemen HTML tertentu berdasarkan atribut id. Setelah elemen ditemukan, kita bisa membaca/ubah teks, atur style, ganti atribut, atau menambahkan anak (child).
+  2.1. Buat elemen baru (createElement).
+   2. Isi teks atau atributnya.
+   3. Pilih tempat tujuan (mis. div kosong dengan getElementById).
+   4. Tempelkan elemen baru ke tempat tujuan (appendChild).
+  */
+  </script>
+</body>
+</html>
